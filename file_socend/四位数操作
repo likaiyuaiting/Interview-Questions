@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(void)
+{
+	int x,xx[4],i=0;
+	printf("输入要操作的四位数：\n");
+	scanf("%d",&x);
+	while (x)
+	{
+		xx[i] = x % 10;
+		x /= 10;
+		i++;
+	}
+	printf("四位数拆分后，相加为：%d",xx[0]+xx[1]+xx[2]+xx[3]);
+	printf("他的逆序数为%d%d%d%d\n",xx[0],xx[1],xx[2],xx[3]);
+	system("pause");
+	return 0;
+}
